@@ -6,7 +6,17 @@ import RickMortyCards from './components/RickMortyCards.vue';
 <template>
  <main>
 <h1>HERO</h1>
-<RickMortyCards/>
+<Suspense>
+   <template #default>
+      <RickMortyCards/>
+   </template>
+   <template #fallback>
+      <p>Loading ...</p>
+   </template>
+
+ </Suspense>
  </main>
+ 
+
 </template>
 
